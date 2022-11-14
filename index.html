@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Elements</title>
+
+    <!-- --------- CSS ----------  -->
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        height: 80vh;
+        align-items: center;
+      }
+      form {
+        background-color: rgb(140, 150, 148);
+        border-radius: 20px;
+        padding: 10px 30px 0px 30px;
+        width: fit-content;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        height: 675px;
+      }
+      form:hover h1 {
+        color: rgb(255, 220, 220);
+        transition: 30s;
+      }
+
+      h2 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        padding-top: 25px;
+        border-top: rgba(255, 255, 255, 0.431) 2px solid;
+      }
+
+      /* name */
+      input[type="text"] {
+        border-radius: 4px;
+        padding: 2px 4px;
+        font-size: 20px;
+        border: mintcream 4px solid;
+      }
+
+      /* pet preferences */
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      input[type="checkbox"] + label.switch {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        transition: 400ms;
+        padding: 0px 18px;
+        border: transparent 2px solid;
+        margin-top: 10px;
+      }
+
+      input[type="checkbox"] + label.switch:hover {
+        background-color: rgba(219, 250, 250, 0.443);
+        height: 50px;
+        transition: 400ms;
+      }
+
+      input[type="checkbox"]:checked + label.switch {
+        border: rgba(255, 255, 255, 0.831) 2px solid;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.162);
+        height: 40px;
+        transition: 400ms;
+      }
+
+      /* shoe style */
+      input[type="radio"] {
+        display: none;
+      }
+
+      input[type="radio"] + label.radio {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        transition: 400ms;
+        padding: 0px 18px;
+        border: transparent 2px solid;
+      }
+
+      input[type="radio"] + label.radio:hover {
+        background-color: rgba(219, 250, 250, 0.443);
+        height: 50px;
+        transition: 400ms;
+      }
+
+      input[type="radio"]:checked + label.radio {
+        border: rgba(255, 255, 255, 0.831) 2px solid;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.162);
+        height: 40px;
+        transition: 400ms;
+      }
+    </style>
+  </head>
+
+  <!-- -------- HTML --------- -->
+  <body>
+    <form>
+      <h1>Personality Assessment</h1>
+
+      <h2>Name</h2>
+
+      <input type="text" />
+
+      <h2>Pet prefernces</h2>
+      <input type="checkbox" id="canine" />
+      <label class="switch" for="canine">Canine</label>
+
+      <input type="checkbox" id="feline" />
+      <label class="switch" for="feline">Feline</label>
+
+      <input type="checkbox" id="pscine" />
+      <label class="switch" for="pscine">Pscine</label>
+
+      <h2>Shoe Style</h2>
+      <input type="radio" id="vans" name="choice" />
+      <label class="radio" for="vans">Vans</label>
+
+      <input type="radio" id="converse" name="choice" />
+      <label class="radio" for="converse">Converse</label>
+
+      <input type="radio" id="nike" name="choice" />
+      <label class="radio" for="nike">Nike</label>
+    </form>
+  </body>
+</html>
